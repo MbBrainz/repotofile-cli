@@ -1,6 +1,6 @@
 import argparse
 import sys
-from utils import sanitize_config_files, create_output_file
+from repotofile.utils import sanitize_config_files, create_output_file
 from git_operations import clone_repo
 
 def main():
