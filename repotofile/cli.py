@@ -1,7 +1,7 @@
 import argparse
 import sys
 from repotofile.utils import sanitize_config_files, create_output_file
-from git_operations import clone_repo
+from repotofile.git_operations import clone_repo
 
 def main():
     parser = argparse.ArgumentParser(description='CLI tool to clone GitHub repos using Git, optionally sanitize config files, and generate a text file.')
