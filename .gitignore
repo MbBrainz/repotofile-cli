@@ -12,6 +12,8 @@ eggs/
 *.egg-info/
 .eggs/
 
+**/.DS_Store
+
 # VSCode workspace files
 .vscode/
 *.code-workspace
