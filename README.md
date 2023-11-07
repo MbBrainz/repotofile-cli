@@ -1,6 +1,6 @@
 # repotofile-cli
 
-`repotofile-cli` is a very light weight command-line tool that allows users to download a GitHub repository and generate a text file containing the repository's code, excluding files specified in `.gitignore`. It's particularly useful for code analysis, backups, and easy sharing of code snapshots.
+`repotofile-cli` is a very light weight command-line tool that allows users to download a GitHub repository and generate a text file containing the repository's code, excluding files specified in `.gitignore`. It's particularly useful for code analysis, backups and uploading to large language models like chatGPT.
 
 ## Features
 
@@ -8,6 +8,8 @@
 - Optionally exclude configuration files, replacing their content with a placeholder.
 - Generate a single text or markdown file with the entire codebase, neatly separated by files.
 - Easy to install and use with a simple command.
+- Ignore config files and directories by default
+- Add custom files and directories to ignore
 
 ## Installation
 
@@ -57,10 +59,10 @@ Generating a custom output file:
 repotofile https://github.com/user/repo -o ~/Documents/repo_snapshot.txt
 ```
 
-Excluding configuration files:
+Ignoring custom files and directories:
 
 ```bash
-repotofile https://github.com/user/repo --no-config
+    repotofile https://github.com/user/repo --ignore-files "*.log,*.txt" --ignore-dirs "build,docs"
 ```
 
 ## Contributing
